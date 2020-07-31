@@ -60,9 +60,9 @@ export default class FirebaseAuth extends React.Component {
       // Get or Create a firebaseUI instance.
       this.firebaseUiWidget = firebaseui.auth.AuthUI.getInstance()
            || new firebaseui.auth.AuthUI(this.firebaseAuth);
-      if (this.uiConfig.signInFlow === 'popup') {
-        this.firebaseUiWidget.reset();
-      }
+      // if (this.uiConfig.signInFlow === 'popup') {
+      //   this.firebaseUiWidget.reset();
+      // }
 
       // We track the auth state to reset firebaseUi if the user signs out.
       this.userSignedIn = false;
