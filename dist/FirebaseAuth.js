@@ -43,9 +43,6 @@ var FirebaseAuth = function (_React$Component) {
 
     return firebaseUiDeletion.then(function () {
       _this2.firebaseUiWidget = firebaseui.auth.AuthUI.getInstance() || new firebaseui.auth.AuthUI(_this2.firebaseAuth);
-      if (_this2.uiConfig.signInFlow === 'popup') {
-        _this2.firebaseUiWidget.reset();
-      }
 
       _this2.userSignedIn = false;
       _this2.unregisterAuthObserver = _this2.firebaseAuth.onAuthStateChanged(function (user) {
